@@ -1,29 +1,4 @@
---[[
-	=====================================================================
-	  BLACKOUT  -  Phase 2 playable slice (ONE FILE, TWO COPIES)
-	=====================================================================
-	INSTALL (paste this exact same code twice):
-	  1) A normal  Script       in ServerScriptService
-	  2) A         LocalScript  in StarterPlayer > StarterPlayerScripts
-	The file detects where it runs, so both copies are identical.
-	No LocalScript = no menu/HUD (you will see a warning in Output).
 
-	STUDIO SETUP (once):
-	  - Game Settings > Security > turn ON "Enable Studio Access to API
-	    Services" so XP saves (otherwise progress is temporary in Studio).
-	  - Playtest with "Start" (server + client) for best results.
-
-	WHAT IS REAL IN THIS FILE
-	  Lobby hub, main menu, loadout, career, full settings (rebind keyboard
-	  AND controller, mobile HUD layout editor), map + mode voting,
-	  3 original maps, Team Deathmatch / Free-for-All / Gun Game,
-	  9 original weapons, server-authoritative shooting, first-person
-	  viewmodel, ADS, recoil, sprint, slide, bots, kill feed, scoreboard,
-	  end-of-match screen, persistent XP / levels / unlocks (DataStore).
-
-	NOT BUILT YET (Phase 3+): Zombies, Campaign, Battle Pass, Robux store,
-	parties, other game modes, TeleportService places. See the reply notes.
-	=====================================================================
 ]]
 
 local RunService = game:GetService("RunService")
