@@ -57,7 +57,7 @@ th, td {
   }
 
  
-  .cert-slide {
+  .cert-slide {   /* ensures that the certifcations are shown cleanly and are foucesd on it to add detail */
     position: absolute;
     top: 0;
     width: 100%;
@@ -70,14 +70,14 @@ th, td {
     left: 0;
   }
 
-  .controls {
+  .controls {   /* for navigation  moving to different slides   */
     display: flex;
     justify-content: center;
     gap: 17px;
     margin-top: 10px;
   }
   
-
+      /* how to interact and how the arrow will look like extra css on it */
   .arrow-right, 
   .nav-arrow {
       padding: 3px;
@@ -87,19 +87,19 @@ th, td {
 
   }
   
-
+      /* right arrow img how the arrows will look like when browser is running the size of it */
   .arrow-right img, 
   .nav-arrow img {
     width: 25px;  
     height: 25px;
   }
 
-
+  /* left arrow img */
   .nav-arrow.left img {
     transform: scaleX(-1.4);
   }
   
-
+  /* info and text about the dots */
   .member-role {
     text-align: center-right;
     margin-top: 27px;
@@ -115,7 +115,7 @@ th, td {
     font-size: 18px;
   }
   
-  /* Dots navigation container */
+  /* Dots navigation  */
   .dots {
     display: flex;
     justify-content: center;
@@ -123,8 +123,8 @@ th, td {
     margin-top: 10px;
   }
   
-  /* Individual dots styling */
-  .dot {
+  /* how individual dots are styled */
+  .dot {   
        width: 10px;
        height: 10px;
        border-radius: 50%;
@@ -133,13 +133,13 @@ th, td {
        transition: background-color 0.34s;
   }
   
-  /* Active dot color */
+  /*  dot color active when index is currently on */
   .dot.active {
     background-color: #3334;
   }
 
 
-.search {
+.search {    /* search bar can type and there can be an X button when clicked clears the text */
   --padding: 14px;
 
   width: max-content;
