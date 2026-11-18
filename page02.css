@@ -69,6 +69,31 @@ th, td {
     align-items: center;
     left: 0;
   }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 17px;
+    margin-top: 10px;
+  }
+  
+
+  .arrow-right, 
+  .nav-arrow {
+      padding: 3px;
+      backgroundcolor: none;
+      cursor: pointer;
+      border: none;
+
+  }
+  
+
+  .arrow-right img, 
+  .nav-arrow img {
+    width: 25px;  
+    height: 25px;
+  }
+  
   
 
 
