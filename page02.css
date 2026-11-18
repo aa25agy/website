@@ -110,6 +110,33 @@ th, td {
     font-weight: bold;
     font-size: 24px;
   }
+ .member-info {
+    color: #666;
+    font-size: 18px;
+  }
+  
+  /* Dots navigation container */
+  .dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  /* Individual dots styling */
+  .dot {
+       width: 10px;
+       height: 10px;
+       border-radius: 50%;
+       background-color: #ccc7;
+       cursor: pointer;
+       transition: background-color 0.34s;
+  }
+  
+  /* Active dot color */
+  .dot.active {
+    background-color: #3334;
+  }
   
   
 
