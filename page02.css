@@ -93,6 +93,23 @@ th, td {
     width: 25px;  
     height: 25px;
   }
+
+
+  .nav-arrow.left img {
+    transform: scaleX(-1.4);
+  }
+  
+
+  .member-info {
+    text-align: center-right;
+    margin-top: 27px;
+    font-family: Monospace;
+  }
+  
+  .member-name {
+    font-weight: bold;
+    font-size: 24px;
+  }
   
   
 
