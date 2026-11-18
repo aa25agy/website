@@ -87,9 +87,23 @@
                   dots.forEach(dot_nav => dot_nav.classList.remove('current_dot')); // same with here the new dot is active not the previous one 
                   slides_cycle[CI].classList.add('current_slide'); // if its on the current certifiate it should be active and showns as the current slide
                   if (dots[CI]) {
-                        dots[CI].classList.add('Current_dot'); //checks if dot is equal to the current slide then it is updated to the correct dot
+                        dots[CI].classList.add('Current_dot');
+                    //checks if dot is equal to the current slide then it is updated to the correct dot
                   }
                   }
+       function Slideright() {
+        showSlide(CI + 1);  // move slide right 
+      }
+    
+       function Slideleft() { // move slide left
+        showSlide(CI - 1);
+      }
+    
+     
+       function startTimer() {
+        everyslideintervel = setIntervel(Slideright, 1500); // move to the right automatically every 1.5 seconds 
+      }
+    
   </script>
 
   </main>
