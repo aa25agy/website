@@ -100,9 +100,41 @@
       }
     
      
-       function startTimer() {
+       function Timeing() {
         everyslideintervel = setIntervel(Slideright, 1500); // move to the right automatically every 1.5 seconds 
       }
+
+       function ResetTime() {
+        ClearTheIntervel(everyslideintervel);
+        Timeing();
+      }
+    
+      
+      if (NextButtonClicked) {
+        NextButtonClicked.addEventListener('click', () => { // if the next button is clciked it move next slide
+          Slideright();
+          ResetTime();
+        });
+      }
+    
+      if (PrevButtonClicked) {
+        PrevButtonClicked.addEventListener('click', () => { // if the previous button is clicked it moves previous slide
+        
+          Slideleft();
+          resetTime();
+        });
+      }
+    
+      // Clickable dots
+      dots.forEach((D, i) => {
+        dot.addEventListener('click', () => { // if user clicks two slide right or left not rpevious or next slide it will check the index of the slide and will display it
+          Active_slide(i);
+          resetTime();
+        });
+      });
+    
+      
+      Timing();
     
   </script>
 
