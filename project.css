@@ -1,1 +1,10 @@
+div.ex1 {
+  background-color: black;
+  width: 100%;
+  height: 400px;
+  overflow: scroll;
+  color: #efebeb;
+  white-space: pre;
+  padding: 1rem;
+}
 
