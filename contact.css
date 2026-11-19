@@ -17,3 +17,26 @@ ol {
 form {
   margin-bottom: 25px;
 }
+
+
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button, 
+input[type="submit"] {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+video {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 20px;
+}
+
+
