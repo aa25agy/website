@@ -5,24 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="project.css">
   <title>project details</title>
+</head>
+<body>
 
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="project.html">Project</a></li>
+    </ul>
+  </nav>
+
+  <main>
   <h1> what is the game about?</h1>
-  <p1> it is a simple ping pong game but with a twist 4 modes: Hot pototo,glass,normal and Shooter</p1>
+  <p> it is a simple ping pong game but with a twist 4 modes: Hot pototo,glass,normal and Shooter</p>
 
   <h1> Hot pototo</h1>
-  <p1>to spice things up instead of having the ball move at the same predictable pace we added hot pototo this means after every time the ball interacts with the rectangle object is moves 1.1 times faster which may
+  <p>to spice things up instead of having the ball move at the same predictable pace we added hot pototo this means after every time the ball interacts with the rectangle object is moves 1.1 times faster which may
     be slow at first but overtime the ball moves incredibly fast.
-  </p1>
+  </p>
   <h1> glass</h1>
-  <p1> normal ping pong but this time there is a glass object in the middle of the screen when interecitng with the ball it sends it back making the game more intresting
+  <p> normal ping pong but this time there is a glass object in the middle of the screen when interecitng with the ball it sends it back making the game more intresting
     and less predictable however after 3 hits the glass shatters.
-  </p1>
+  </p>
   <h1> shooter</h1>
-  <p1> the human can shoot at the ai when hit the Ai gets weaker in 2 ways one the ai now has the gravity factor and flaps up and down like a bird
+  <p> the human can shoot at the ai when hit the Ai gets weaker in 2 ways one the ai now has the gravity factor and flaps up and down like a bird
     making it harder for the Ai or the AI rectangle can shrink after every successful hit.
-  </p1>
+  </p>
   <h1> details of the code can be found below.</h1>
   <div class="ex1">
+<pre>
     import pygame
     import random
     pygame.init()
@@ -404,8 +415,9 @@
         pygame.display.update()
         clock.tick(60)
     
-      </div>
-
+</pre>
+  </div>
+  </main>
 
 </body>
 </html>
