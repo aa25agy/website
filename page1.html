@@ -5,48 +5,54 @@
     th, td {
         border-style: groove ;
     }
-</style>
+  </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="page02.css">
-  <form role="search">
-  <div class="search">
-    <label for="site-search-2" class="visually-hidden">Search</label>
-    <span class="material-symbols-outlined" aria-hidden="true">search</span>
-    <input class="search-input" id="site-search-2" type="search" placeholder="search" aria-label="Search">
-  </div>
-</form>
   <title>about me</title>
+</head>
+<body>
+  <nav>
+    <a href="contact.html">Contact</a>
+    <a href="project.html">Projects</a>
+  </nav>
+  <form role="search">
+    <div class="search">
+      <label for="site-search-2" class="visually-hidden">Search</label>
+      <span class="material-symbols-outlined" aria-hidden="true">search</span>
+      <input class="search-input" id="site-search-2" type="search" placeholder="search" aria-label="Search">
+    </div>
+  </form>
   <main>
-  <h1>What am I doing?</h1>
-  <p>
-    I am a student at the University of Hertfordshire currently studying Computer
-    Science (Cybersecurity and Networks). My goal is to enter the field of
-    cybersecurity. To achieve this, I have decided to pursue additional
-    certifications alongside my degree, such as Microsoft Azure, CompTIA
-    Security+, Cisco CCNA, and ITIL 4 Foundation. These certifications will allow
-    me to strengthen my foundations. Further project details can be found below.
-  </p>
-  <table style="width:100%">
-    <thead>
-    <tr>
-      <th>Course</th>
-      <th>info</th>
-      <th>What do I acheive?</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td>microsoft azure</td>
-      <td>a course on the cloud fundamentals</td>
-      <td>gives myself a "birds eye view" on the field of cloud computing</td>
-    </tr>
-    <tr>
-      <td>comptia (security+)</td>
-      <td>a course that allows me to learn the fundamentals of security </td>
-      <td>good for Cvs </td>
-    </tr>
-    <tr>
+    <h1>What am I doing?</h1>
+    <p>
+      I am a student at the University of Hertfordshire currently studying Computer
+      Science (Cybersecurity and Networks). My goal is to enter the field of
+      cybersecurity. To achieve this, I have decided to pursue additional
+      certifications alongside my degree, such as Microsoft Azure, CompTIA
+      Security+, Cisco CCNA, and ITIL 4 Foundation. These certifications will allow
+      me to strengthen my foundations. Further project details can be found below.
+    </p>
+    <table style="width:100%">
+      <thead>
+      <tr>
+        <th>Course</th>
+        <th>info</th>
+        <th>What do I acheive?</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>microsoft azure</td>
+        <td>a course on the cloud fundamentals</td>
+        <td>gives myself a "birds eye view" on the field of cloud computing</td>
+      </tr>
+      <tr>
+        <td>comptia (security+)</td>
+        <td>a course that allows me to learn the fundamentals of security </td>
+        <td>good for Cvs </td>
+      </tr>
+      <tr>
         <td>Cisco CCNA</td>
         <td>a course on networking fundamentals </td>
         <td>my goal is to become a penertration tester to become one I need to know and understand networks as I cannot break into something I do not know. </td>
@@ -56,96 +62,91 @@
         <td>a course to improve consultation. </td>
         <td>good for Cvs </td>
       </tr>
-    </tbody>
-  </table>
-  <div class="recycle_images">
-        <span class="cert-slide active"><img src="pic1.png" alt="cert1"></span>
-        <span class="certification_slider"><img src="pic2.jpeg" alt="cert2"></span>
-        <span class="certification_slider"><img src="pic3.png" alt="cert3"></span>
-        <span class="certification_slider"><img src="pic4.png" alt="cert4"></span>
-      </div>
-      
-   <div class="controls_arrow">
-        <button class="nav-arrow left"><img src="pic10.png" alt="Previous"></button>
-        <button class="nav-arrow right"><img src="pic10.png" alt="Next"></button>
-      </div>
+      </tbody>
+    </table>
+    <div class="recycle_images">
+      <span class="cert-slide active certification_slider current_slide"><img src="pic1.png" alt="cert1"></span>
+      <span class="certification_slider"><img src="pic2.png" alt="cert2"></span>
+      <span class="certification_slider"><img src="pic3.png" alt="cert3"></span>
+      <span class="certification_slider"><img src="pic4.jpeg" alt="cert4"></span>
+    </div>
+
+    <div class="controls_arrow">
+      <button class="nav-arrow left"><img src="leftarrow.png" alt="Previous"></button>
+      <button class="nav-arrow right"><img src="rightarrow.png" alt="Next"></button>
+    </div>
     <div class="Further_info">
-    <div class="member-name">Certification Details</div>
-    <div class="member-role">Hover or click to view</div>
-  </div>
-  
-  <div class="dots_for_navigation">
-    <div class="dot active" data-index="0"></div>
-    <div class="dot_nav" data-index="1"></div>
-    <div class="dot_nav" data-index="2"></div>
-    <div class="dot_nav" data-index="3"></div>
-  </div>
-  <script>
-  const slides_cycle = document.querySelectorAll('.recycle_images .certification_slider'); // using the querySelectorAll to join up all classes adding variables
-    const dots_nav = document.querySelectorAll('.dots_for_navigation .dot_nav');
-    const next_Slide = document.querySelector('.nav-arrow.right');
-    const prev_Slide = document.querySelector('.nav-arrow.left');
-    let CI = 0;
-    let slide_Move;
+      <div class="member-name">Certification Details</div>
+      <div class="member-role">Hover or click to view</div>
+    </div>
 
-    function Active_slide(i) { // declares a function i is the arguement i represents an index 0 first slide 1 second slide
-                  CI = (i + slides_cycle.length) % slides_cycle.length; // if its at 0 it goes to 1 the last index 3 should not go to 4 it should loop back to 0
-                  slides_cycle.forEach(cert => cert.classList.remove('current_slide')); // when moving onto the next slide the previous slide is no longer active 
-                  dots.forEach(dot_nav => dot_nav.classList.remove('current_dot')); // same with here the new dot is active not the previous one 
-                  slides_cycle[CI].classList.add('current_slide'); // if its on the current certifiate it should be active and showns as the current slide
-                  if (dots[CI]) {
-                        dots[CI].classList.add('Current_dot');
-                    //checks if dot is equal to the current slide then it is updated to the correct dot
-                  }
-                  }
-       function Slideright() {
-        showSlide(CI + 1);  // move slide right 
-      }
-    
-       function Slideleft() { // move slide left
-        showSlide(CI - 1);
-      }
-    
-     
-       function Timeing() {
-        everyslideintervel = setIntervel(Slideright, 1500); // move to the right automatically every 1.5 seconds 
+    <div class="dots_for_navigation">
+      <div class="dot active dot_nav current_dot" data-index="0"></div>
+      <div class="dot_nav" data-index="1"></div>
+      <div class="dot_nav" data-index="2"></div>
+      <div class="dot_nav" data-index="3"></div>
+    </div>
+    <script>
+      const slides_cycle = document.querySelectorAll('.recycle_images .certification_slider'); // using the querySelectorAll to join up all classes adding variables
+      const dots_nav = document.querySelectorAll('.dots_for_navigation .dot_nav');
+      const next_Slide = document.querySelector('.nav-arrow.right');
+      const prev_Slide = document.querySelector('.nav-arrow.left');
+      let CI = 0;
+      let slide_Move;
+
+      function Active_slide(i) { // declares a function i is the arguement i represents an index 0 first slide 1 second slide
+        CI = (i + slides_cycle.length) % slides_cycle.length; // if its at 0 it goes to 1 the last index 3 should not go to 4 it should loop back to 0
+        slides_cycle.forEach(cert => cert.classList.remove('current_slide')); // when moving onto the next slide the previous slide is no longer active 
+        dots_nav.forEach(dot_nav => dot_nav.classList.remove('current_dot')); // same with here the new dot is active not the previous one 
+        slides_cycle[CI].classList.add('current_slide'); // if its on the current certifiate it should be active and showns as the current slide
+        if (dots_nav[CI]) {
+          dots_nav[CI].classList.add('current_dot');
+          //checks if dot is equal to the current slide then it is updated to the correct dot
+        }
       }
 
-       function ResetTime() {
-        ClearTheIntervel(everyslideintervel);
+      function Slideright() {
+        Active_slide(CI + 1); // move slide right 
+      }
+
+      function Slideleft() { // move slide left
+        Active_slide(CI - 1);
+      }
+
+      function Timeing() {
+        slide_Move = setInterval(Slideright, 1500); // move to the right automatically every 1.5 seconds 
+      }
+
+      function ResetTime() {
+        clearInterval(slide_Move);
         Timeing();
       }
-    
-      
-      if (NextButtonClicked) {
-        NextButtonClicked.addEventListener('click', () => { // if the next button is clciked it move next slide
+
+      if (next_Slide) {
+        next_Slide.addEventListener('click', () => { // if the next button is clciked it move next slide
           Slideright();
           ResetTime();
         });
       }
-    
-      if (PrevButtonClicked) {
-        PrevButtonClicked.addEventListener('click', () => { // if the previous button is clicked it moves previous slide
-        
+
+      if (prev_Slide) {
+        prev_Slide.addEventListener('click', () => { // if the previous button is clicked it moves previous slide
           Slideleft();
-          resetTime();
+          ResetTime();
         });
       }
-    
+
       // Clickable dots
-      dots.forEach((D, i) => {
-        dot.addEventListener('click', () => { // if user clicks two slide right or left not rpevious or next slide it will check the index of the slide and will display it
+      dots_nav.forEach((D, i) => {
+        D.addEventListener('click', () => { // if user clicks two slide right or left not rpevious or next slide it will check the index of the slide and will display it
           Active_slide(i);
-          resetTime();
+          ResetTime();
         });
       });
-    
-      
-      Timing();
-    
-  </script>
-  <img src="picofme.jpg" alt="my pic" width="250" height="250">
 
+      Timeing();
+    </script>
+    <img src="picofme.jpg" alt="my pic" width="250" height="250">
   </main>
 </body>
 </html>
